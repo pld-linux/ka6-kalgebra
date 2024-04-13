@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.02.1
+%define		kdeappsver	24.02.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kalgebra
 Summary:	Kalgebra
 Name:		ka6-%{kaname}
-Version:	24.02.1
+Version:	24.02.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2f66d5a897b47d9e9657c47e7dfe28f0
+# Source0-md5:	38179b327a754467a23a4bc5679f6c68
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -97,8 +97,16 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/calgebra
+%attr(755,root,root) %{_bindir}/kalgebra
 %attr(755,root,root) %{_bindir}/kalgebramobile
-%{_desktopdir}/org.kde.kalgebramobile.desktop
 %{_iconsdir}/hicolor/64x64/apps/kalgebra.png
 %{_iconsdir}/hicolor/scalable/apps/kalgebra.svgz
+%{_datadir}/katepart5/syntax/kalgebra.xml
+%{_datadir}/metainfo/org.kde.graphsplasmoid.appdata.xml
+%{_datadir}/metainfo/org.kde.kalgebra.appdata.xml
 %{_datadir}/metainfo/org.kde.kalgebramobile.appdata.xml
+%{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/contents/ui/config.ui
+%{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/contents/ui/main.qml
+%{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/metadata.json
+%{_desktopdir}/org.kde.kalgebra.desktop
+%{_desktopdir}/org.kde.kalgebramobile.desktop
