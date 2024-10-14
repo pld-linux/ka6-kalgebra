@@ -102,10 +102,15 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kalgebramobile
 %{_iconsdir}/hicolor/64x64/apps/kalgebra.png
 %{_iconsdir}/hicolor/scalable/apps/kalgebra.svgz
+%dir %{_datadir}/katepart5
+%dir %{_datadir}/katepart5/syntax
 %{_datadir}/katepart5/syntax/kalgebra.xml
 %{_datadir}/metainfo/org.kde.graphsplasmoid.appdata.xml
 %{_datadir}/metainfo/org.kde.kalgebra.appdata.xml
 %{_datadir}/metainfo/org.kde.kalgebramobile.appdata.xml
+%dir %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
+%dir %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/contents
+%dir %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/contents/ui
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/contents/ui/config.ui
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/contents/ui/main.qml
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid/metadata.json
